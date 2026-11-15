@@ -1,0 +1,19 @@
+name: Link Checker
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    uses: thechelsuk/workflows/.github/workflows/link-checker.yml@main
+    with:
+      # The site's own host, dots escaped. Change it to match CNAME.
+      site_host: example\.thechels\.uk
+      build: none
+      site_dir: .

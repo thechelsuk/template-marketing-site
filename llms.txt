@@ -1,0 +1,9 @@
+# App name
+
+> One sentence about what the app does and who it's for.
+
+## Links
+
+- [Website](https://example.thechels.uk/): the official marketing site
+- [Privacy policy](https://thechels.uk/app/privacy): what the app does and does not collect
+- [More apps by thechelsuk](https://thechels.uk/projects): the developer's other apps and projects

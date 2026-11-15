@@ -1,0 +1,3 @@
+Contact: security@thechels.uk
+Preferred-Languages: en
+Canonical: https://example.thechels.uk/.well-known/security.txt

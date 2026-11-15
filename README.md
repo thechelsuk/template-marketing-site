@@ -15,6 +15,16 @@ repo set-up already in place:
 
 ## Start a site from it
 
+The quick way: clone this template and run its script, which asks for the app name, address and App Store ID,
+then does every step below and pushes the new site:
+
+```bash
+gh repo clone thechelsuk/template-marketing-site /tmp/tms && /tmp/tms/new-site.sh
+```
+
+Or pass the values directly: `new-site.sh --name Tomoz --host tomoz.thechels.uk --store-id 1234567890
+--description "See only tomorrow."` (add `--yes` to skip the confirmation). By hand, the steps are:
+
 1. Select **Use this template** on GitHub, then **Create a new repository**.
 2. Set `CNAME` to the site's host.
 3. Set `site_host` in `.github/workflows/link-checker.yml` to the same host,

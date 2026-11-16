@@ -11,6 +11,8 @@ permissions:
 
 jobs:
   links:
+    # The template's own page holds placeholder App Store links, so only sites made from it are checked.
+    if: github.repository != 'thechelsuk/template-marketing-site'
     uses: thechelsuk/workflows/.github/workflows/link-checker.yml@main
     with:
       # The site's own host, dots escaped. Change it to match CNAME.

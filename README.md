@@ -34,8 +34,9 @@ Or pass the values directly: `new-site.sh --name Tomoz --host tomoz.thechels.uk 
 5. Fill in the pages: the app name, description and App Store ID
    (`APP_STORE_ID`, `APP_SLUG`) in `index.html`, then `llms.txt` and
    `styles.css`.
-6. If you add files or folders, add them to the check and copy steps in
-   `.github/workflows/pages.yml`.
+6. The site deploys through the shared Pages workflow (`thechelsuk/workflows`),
+   which publishes every file in the repo except `.github`, dotfiles and
+   README/LICENSE, so new files and folders need no workflow change.
 7. Point the links in `.github/CONTRIBUTING.md` and
    `.github/ISSUE_TEMPLATE/config.yml` at the new repo.
 8. In **Settings → Pages**, set the source to **GitHub Actions** and add the

@@ -91,9 +91,9 @@ printf '%s\n' "$HOST" > CNAME
 perl -pi -e 's/example\\\.thechels\\\.uk/$ENV{HOST_RE}/g' .github/workflows/link-checker.yml
 perl -pi -e 's/\Qexample.thechels.uk\E/$ENV{HOST}/g' index.html robots.txt sitemap.xml llms.txt .well-known/security.txt README.md
 perl -ni -e 'print unless /Replace APP_STORE_ID/' index.html
-perl -pi -e 's/\QAPP_STORE_ID\E/$ENV{STORE_ID}/g; s/\QAPP_SLUG\E/$ENV{SLUG}/g; s/\QOne sentence about the app.\E/$ENV{HDESC}/g; s/\QApp name\E/$ENV{HNAME}/g' index.html
+perl -pi -e 's/\QAPP_STORE_ID\E/$ENV{STORE_ID}/g; s/\QAPP_SLUG\E/$ENV{SLUG}/g; s/\QOne sentence about the app.\E/$ENV{HDESC}/g; s/\QApp name\E/$ENV{HNAME}/g' index.html 404.html
 perl -pi -e 's/\QAPP_STORE_ID\E/$ENV{STORE_ID}/g; s/\QAPP_SLUG\E/$ENV{SLUG}/g; s/\QOne sentence about the app.\E/$ENV{DESCRIPTION}/g; s/\QApp name\E/$ENV{NAME}/g' llms.txt
-perl -pi -e 's/\Qthechelsuk\/template-marketing-site\E/$ENV{OWNER}\/$ENV{REPO}/g' .github/CONTRIBUTING.md .github/ISSUE_TEMPLATE/config.yml
+perl -pi -e 's/\Qthechelsuk\/template-marketing-site\E/$ENV{OWNER}\/$ENV{REPO}/g' .github/CONTRIBUTING.md .github/ISSUE_TEMPLATE/config.yml index.html 404.html
 git rm -q new-site.sh
 if grep -rn -E 'APP_STORE_ID|APP_SLUG|example\.thechels\.uk' --exclude-dir=.git --exclude=README.md . ; then
   echo "Some placeholders are left (above): fix them, then commit and push." >&2; exit 1

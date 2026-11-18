@@ -39,13 +39,19 @@ main,
 
 .site-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
 }
 
 .site-header nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.site-header nav a {
+  white-space: nowrap;
 }
 
 .brand {
@@ -55,4 +61,10 @@ main,
 
 .hero {
   padding: 3rem 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
